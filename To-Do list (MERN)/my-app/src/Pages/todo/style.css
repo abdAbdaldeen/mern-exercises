@@ -1,0 +1,54 @@
+.todo {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.todo h2 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.todo #to-do-form {
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: auto;
+}
+
+.todo #to-do-form input {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  width: 90%;
+  font-size: 1rem;
+}
+
+.todo #to-do-form button {
+  font-size: 1.2rem;
+  width: 10%;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.todo .updateform input[type="text"] {
+  outline: 0;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.todo .updateform button {
+  border: none;
+  outline: 0;
+  background-color: transparent;
+}
+
+.todo .updateform button i {
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=style.css.map */

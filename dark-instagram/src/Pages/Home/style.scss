@@ -1,0 +1,23 @@
+.home {
+  margin: auto;
+  max-width: 900px;
+  .postform {
+    display: grid;
+    grid-template-columns: 2fr 1fr 50px;
+    grid-gap: 1rem;
+    input {
+      background-color: #242526;
+      border: none;
+      outline: none;
+      border-radius: 3px;
+    }
+    input[type="text"] {
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+    }
+  }
+  .posts {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

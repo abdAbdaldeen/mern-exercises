@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+.post {
+  background-color: #242526;
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+  .post-header {
+    display: flex;
+    align-items: center;
+    // -----------------------
+    .ring {
+      width: 42px;
+      height: 42px;
+      margin: 0.7rem 1rem;
+      .profileImg {
+        width: 37px;
+        height: 37px;
+      }
+    }
+    // -----------------------
+    .name-loc {
+      .name {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .loc {
+        font-size: 12px;
+      }
+    }
+  }
+  .postImg {
+    width: 100%;
+  }
+  .post-body {
+    padding: 1rem;
+    padding-bottom: 0;
+    .reactions-row {
+      display: flex;
+      justify-content: space-between;
+      button {
+        background-color: transparent;
+        border: 0px;
+        outline: 0;
+      }
+      i {
+        font-size: 1.4rem;
+      }
+      div {
+        i {
+          margin-right: 1rem;
+        }
+      }
+    }
+    // ----------------------------------
+    .likes,
+    .comments p {
+      font-size: 14px;
+    }
+    .time {
+      font-size: 10px;
+      color: #999;
+      margin: 0.5rem 0px;
+    }
+  }
+
+  .red {
+    i {
+      color: red;
+    }
+  }
+
+  .comment {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    .profileImgCom {
+      width: 2rem;
+      margin-right: 0.5rem;
+    }
+    .comtime {
+      margin-left: 10px;
+    }
+  }
+  .formCom {
+    display: grid;
+    grid-column: auto 2rem;
+    input {
+      background: transparent;
+      border: 0;
+      outline: 0;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-top: 1px solid #38393a;
+    }
+    button {
+      background: transparent;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .post {
+    margin: 1rem 0;
+  }
+}

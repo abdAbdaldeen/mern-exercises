@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.post {
+  background-color: #242526;
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.post .post-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post .post-header .ring {
+  width: 42px;
+  height: 42px;
+  margin: 0.7rem 1rem;
+}
+
+.post .post-header .ring .profileImg {
+  width: 37px;
+  height: 37px;
+}
+
+.post .post-header .name-loc .name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post .post-header .name-loc .loc {
+  font-size: 12px;
+}
+
+.post .postImg {
+  width: 100%;
+}
+
+.post .post-body {
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.post .post-body .reactions-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post .post-body .reactions-row button {
+  background-color: transparent;
+  border: 0px;
+  outline: 0;
+}
+
+.post .post-body .reactions-row i {
+  font-size: 1.4rem;
+}
+
+.post .post-body .reactions-row div i {
+  margin-right: 1rem;
+}
+
+.post .post-body .likes,
+.post .post-body .comments p {
+  font-size: 14px;
+}
+
+.post .post-body .time {
+  font-size: 10px;
+  color: #999;
+  margin: 0.5rem 0px;
+}
+
+.post .red i {
+  color: red;
+}
+
+.post .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5rem;
+}
+
+.post .comment .profileImgCom {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.post .comment .comtime {
+  margin-left: 10px;
+}
+
+.post .formCom {
+  display: -ms-grid;
+  display: grid;
+  grid-column: auto 2rem;
+}
+
+.post .formCom input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-top: 1px solid #38393a;
+}
+
+.post .formCom button {
+  background: transparent;
+}
+
+@media only screen and (max-width: 800px) {
+  .post {
+    margin: 1rem 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

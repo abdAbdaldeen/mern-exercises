@@ -1,0 +1,23 @@
+.ring {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profileImg {
+  border-radius: 100%;
+  border: solid #242526;
+}
+.new {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #c83795 90%
+  );
+}
+.old {
+  background-color: rgb(119, 119, 119);
+}

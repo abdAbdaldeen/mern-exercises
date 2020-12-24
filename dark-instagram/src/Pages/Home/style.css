@@ -1,0 +1,35 @@
+.home {
+  margin: auto;
+  max-width: 900px;
+}
+
+.home .postform {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 50px;
+      grid-template-columns: 2fr 1fr 50px;
+  grid-gap: 1rem;
+}
+
+.home .postform input {
+  background-color: #242526;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+.home .postform input[type="text"] {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+}
+
+.home .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+.container {
+  display: grid !important;
+  grid-template-columns: 1fr 2px 1fr;
+  grid-gap: 2.5rem;
+  margin-top: 2rem;
+  .line {
+    background-color: #333;
+  }
+  h2 {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .error {
+    margin-top: -1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
+    margin-top: 2rem;
+    grid-template-rows: auto 2px auto;
+  }
+}

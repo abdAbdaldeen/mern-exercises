@@ -1,0 +1,40 @@
+.done-list-co h2 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.done-list-co .done-list {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(65, 225, 132, 0.3);
+  padding: 2rem;
+  margin: 1.5rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90% 10%;
+      grid-template-columns: 90% 10%;
+}
+
+.done-list-co .done-list .tasktext {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.done-list-co .done-list span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.done-list-co .done-list span i {
+  font-size: 1.1rem;
+}
+/*# sourceMappingURL=style.css.map */
