@@ -1,5 +1,5 @@
 import Login from './Pages/login/login'
-import Todo from './Pages/todo/todo'
+import Todo from './Pages/todo/todo1'
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import Google from './Pages/testgoogle';

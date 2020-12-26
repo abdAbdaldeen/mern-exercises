@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { LogingContext } from "../../UserContext";
 function Header(x) {
   return (
     <header>
@@ -11,7 +10,11 @@ function Header(x) {
           {x.isLogin && (
             <>
               <Link to="/">
-                <li>
+                <li
+                  onClick={() => {
+                    sessionStorage.clear();
+                  }}
+                >
                   <i className="fas fa-sign-out-alt"></i>
                 </li>
               </Link>

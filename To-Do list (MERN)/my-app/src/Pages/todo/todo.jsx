@@ -37,13 +37,15 @@ class ToDo extends React.Component {
     if (newItem !== "") {
       let config = {
         headers: {
-          "x = auth-token": sessionStorage.getItem("tokenID"),
+          token: sessionStorage.getItem("token"),
         },
       };
       let newJSON = await { task: newItem, isdone: false };
-      axios.post("http://localhost:8000/api/tasks", newJSON).then(() => {
-        this.getdata();
-      });
+      axios
+        .post("http://localhost:8000/api/tasks", newJSON, config)
+        .then(() => {
+          this.getdata();
+        });
     }
     this.setState({
       text: "",

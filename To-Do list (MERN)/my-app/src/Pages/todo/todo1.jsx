@@ -16,17 +16,20 @@ class ToDo extends React.Component {
       updatText: "",
       updatId: "",
       updatTogel: false,
+      userId: sessionStorage.getItem("userId"),
     };
   }
   getdata = () => {
-    axios.get("http://localhost:8000/api/tasks").then((res) => {
-      console.log(res);
+    axios
+      .get("http://localhost:8000/api/tasks/" + this.state.userId)
+      .then((res) => {
+        console.log(res);
 
-      this.setState({
-        items: res.data.filter((task) => !task.isdone),
-        doneItems: res.data.filter((task) => task.isdone),
+        this.setState({
+          items: res.data.filter((task) => !task.isdone),
+          doneItems: res.data.filter((task) => task.isdone),
+        });
       });
-    });
   };
   componentDidMount() {
     this.getdata();
@@ -36,9 +39,11 @@ class ToDo extends React.Component {
     const newItem = this.state.text;
     if (newItem !== "") {
       let newJSON = await { task: newItem, isdone: false };
-      axios.post("http://localhost:8000/api/tasks", newJSON).then(() => {
-        this.getdata();
-      });
+      axios
+        .post("http://localhost:8000/api/tasks/" + this.state.userId, newJSON)
+        .then(() => {
+          this.getdata();
+        });
     }
     this.setState({
       text: "",
@@ -50,15 +55,20 @@ class ToDo extends React.Component {
     });
   };
   deleteItem = (id) => {
-    axios.delete("http://localhost:8000/api/tasks/" + id).then(() => {
-      this.getdata();
-    });
+    axios
+      .delete("http://localhost:8000/api/tasks/" + this.state.userId + "/" + id)
+      .then(() => {
+        this.getdata();
+      });
   };
   Hupdate = async () => {
     let newJSON = await { task: this.state.updatText };
     axios
       .put(
-        "http://localhost:8000/api/tasks/update/" + this.state.updatId,
+        "http://localhost:8000/api/tasks/update/" +
+          this.state.userId +
+          "/" +
+          this.state.updatId,
         newJSON
       )
       .then(() => {
@@ -77,7 +87,9 @@ class ToDo extends React.Component {
 
   setDone = (id) => {
     axios
-      .put("http://localhost:8000/api/tasks/done/" + id)
+      .put(
+        "http://localhost:8000/api/tasks/done/" + this.state.userId + "/" + id
+      )
       .then(() => {
         this.getdata();
       })
